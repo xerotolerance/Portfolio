@@ -1,0 +1,141 @@
+html, body {
+  background: black
+}
+
+.sidebar{
+  position: fixed;
+  height: 100vh;
+  width: 20vh;
+  max-width: 250px;
+}
+
+.sidebar:hover > .menu{
+  position: absolute;
+  width: 25%;
+}
+
+
+.menu{
+  border-radius: 5%;
+  /*background-image: linear-gradient(to bottom,red,darkviolet);*/
+  background-color: rgba(0,0,0,0);
+  height: 50vh;
+  width: 2.5%;
+
+  /*Center within div*/
+  position: absolute;
+  transform: translate(0,40%);
+}
+
+
+
+.menu_spacer{
+  size: inherit;
+  position: sticky;
+  width: 100%;
+  background-color: black;
+}
+
+.menu_spacer#Top,#Bottom{
+  height: 15%;
+}
+
+.menu_separator{
+
+}
+
+.menu_item{
+  border-radius: 25%;
+  size: inherit;
+  position: sticky;
+  height: 10%;
+  width: 100%;
+  margin: 15% 0% 15% 0%;
+  text-align: right;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.menu_item:hover{
+  position: relative;
+  height: 10%;
+  width: 500%;
+  border-radius:  10% 0% 25% 10%;
+  visibility: visible;
+  text-align: left;
+}
+
+.menu_item:hover > .navigation_object{
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+
+}
+
+.menu_item:hover  >  .sidebar_icon {
+  /*Resize image with div*/
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+
+  position: relative;
+  top: 25%;
+  left: 25%;
+  transform: translate(-25%,-25%);
+}
+
+.menu_item#Home{
+  background: red;
+}
+
+.menu_item#Site\ Map{
+  background: orange;
+}
+
+.menu_item#About\ Me{
+  background: yellow;
+}
+
+.menu_item#My\ Projects{
+  background: green;
+}
+
+.menu_item#My\ LinkedIn{
+  background: blue;
+}
+
+.menu_item#My\ GitHub{
+  background: indigo;
+}
+
+.sidebar_icon {
+
+  /*Resize image with div*/
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+
+  /*Center within div*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navigation_object{
+  /*Resize image with div*/
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: visible;
+}
+
+.menu_text{
+ font-size: smaller;
+}
+

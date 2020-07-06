@@ -1,0 +1,112 @@
+html, body{
+  display: inline-block;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: inherit;
+  overflow: hidden;
+}
+
+.organization{
+  height: inherit;
+  width: inherit;
+  overflow-wrap: normal;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /*word-wrap: break-word;*/
+}
+
+table{
+  height: inherit;
+  width: inherit;
+  overflow-y: auto;
+  /*word-wrap: break-word;*/
+}
+
+tr,td,th{
+  padding: 2px;
+  /*word-wrap: break-word;*/
+}
+
+tbody tr{height: 25vh;}
+p{
+  word-wrap: break-word;
+  text-align: center;
+  width: 75%;
+  font-size: 3ch;
+}
+a{color: black}
+a.meta-link{font-size: 1em;}
+a:visited{color: darkred;}
+
+thead{
+  /*background-color:  gray;*/ /*<-- bug in firefox makes this element's bgcolor overwrite borders of children*/
+  border-bottom: medium black solid;
+  font-size: 1.5em;
+}
+tbody{
+  height: inherit;
+  width: inherit;
+}
+td.project-description  a{text-decoration: none;}
+td.project-name  a:link{font-weight: bold;}
+
+tr:nth-of-type(even) {
+  background-color: rgba(138, 162, 158, .97);
+  color: white;
+}
+tr:nth-of-type(odd) {
+  background-color: rgba(255, 230, 153, .97);
+  color: black;
+}
+tr:nth-of-type(odd) a:hover {color: green}
+tr:nth-of-type(even) a:hover { color: white}
+
+/* Flip direction of tooltip in last row*/
+/*tr:last-of-type .tooltip .tooltiptext{
+  top: -350%;
+  left: 50%;
+}
+!* Flip direction of tooltip arrow in last row*!
+tr:last-of-type .tooltip .tooltiptext::after {
+  top: 100%;
+  left: 50%;
+  border-color: #555 transparent transparent transparent;
+}*/
+
+.tooltip{
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+#Project-Table-header { background: inherit;}
+#Project-Table-header > th {    /*HotFix for*/
+  background-color: gray;       /*FF Bug 688556 */
+  background-clip: padding-box; /*assures border shows in firefox*/
+
+  /*HotFix for CHR Bug 702927
+   to make table header stick to top of page
+    (position: sticky doesn't work on thead)*/
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+.project-name{
+  text-align: center;
+  border-right: thick gray ridge;
+
+}
+.project-description{text-align: center}
+
+/*tbody{overflow: scroll}*/
+#Project-Table{
+  /*flex-flow: column nowrap;
+  flex: 1 0 100%;
+  min-height: 100%;
+  min-width: 100%;*/
+  height: 100vh;
+  /*width: 100%;*/
+  background: rgba(138, 162, 158, .97);
+  /*overflow: auto;*/
+}

@@ -1,0 +1,241 @@
+html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: auto;
+  font-size: 3vmin;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  width: inherit;
+  margin: inherit;
+  overflow: inherit;
+  background-color: #222222;
+}
+
+iframe, embed {
+  max-height: 100%;
+  max-width: 100%;
+  outline: none;
+  border: 0;
+}
+
+/*-----------------------------*/
+.organization{
+  height: auto;
+  }
+#page-content{
+  height: 100%;
+}
+/*-----------------------------*/
+#site-foreword{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  align-self: center;
+  border: cornflowerblue solid 5px;
+}
+
+
+/*-----------------------------*/
+.navbar{
+  display: flex;
+  background-color: black;
+  color: white;
+  max-height: 4rem;
+}
+
+#top-bar{
+  height: 25%;
+  max-height: 3rem;
+  padding: 0 1%;
+}
+#top-bar > #top-bar_site-logo {
+  height: 85%;
+  width: auto;
+}
+#top-bar > #top-bar_site-title{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1%;
+  font-size: 1rem;
+}
+
+#bottom-bar{
+  height: 15%;
+  max-height: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1%;
+}
+
+#left-panel > #side-bar{
+  /*height: 75%;*/
+  max-height: none;
+  min-height: 70%;
+  flex-grow: 2;
+}
+#left-panel > .buffer {
+  flex-grow: 1;
+}
+#left-panel > #left-panel_top-buffer{
+  border-radius: 50% 0 0 0;
+  /*background: url("../svg/CJM Logo.svg") no-repeat center;
+  background-size: contain;*/
+}
+#left-panel > #left-panel_bottom-buffer{
+
+}
+/*-----------------------------*/
+.vertical-menu{
+  display: flex;
+  flex-flow: column nowrap;
+  flex-basis: auto;
+}
+
+.nav-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: inherit;
+  flex-grow: 1;
+  border-bottom: 1px wheat solid;
+
+}
+
+.nav-item:last-child{
+  border-bottom: none;
+}
+
+/*-----------------------------*/
+.tri-fold {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.tri-fold-panel{
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  flex: 1 33%;
+}
+
+#three-panel-box{
+  max-height: 50em;
+  border-radius: 2%;
+  background-color: black;
+}
+#left-panel{
+  flex-wrap: nowrap;
+  background-color: #183446; /*#1B2F33;*/
+  justify-content: space-around;
+  margin: 0 .25% 0 .5%;
+  flex: 0 16.5%;
+  border-radius: 0% 3% 3% 0%;
+}
+#middle-panel{
+  background: content-box dimgray no-repeat center;
+  background-image: /*url("../svg/CJM Logo.svg"),*/ url("../img/Backgrounds/laptop-headphones.jpg");
+  background-size: /*contain,*/ cover;
+  /*flex-grow: 5;*/
+  margin: 0 .25%;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+}
+#right-panel{
+  background-color: midnightblue;
+  /*background-image: url("../img/Portraits/IMG_2224.jpg");*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: top;
+  margin: 0 .5% 0 .25%;
+  /*flex: 1.25;*/
+  flex: 0 0;
+  width: 0;
+  min-width: 0; /*required to make flex-grow: 0 work in firefox*/
+}
+
+/*-----------------------------*/
+#right-panel > #slide-area{
+  height: 100%;
+  width: auto;
+  display: inline-block;
+}
+ .slideshow_slide{
+   height: 100%;
+   width: auto;
+   background: center no-repeat;
+   background-size: cover;
+
+ }
+
+
+/*-----------------------------*/
+.displayArea_slide-in{
+  animation: displayArea_slide-in 1s forwards;
+}
+.displayArea_slide-out{
+  animation: displayArea_slide-out 1s forwards;
+}
+
+.right-panel_slide-in{
+  animation: right-panel_slide-in 1s forwards;
+}
+
+.right-panel_slide-out{
+  animation: right-panel_slide-out 1s forwards;
+}
+
+
+/*@keyframes middle-panel_slide-in {
+  to {
+    flex: 2;
+  }
+}*/
+
+@keyframes right-panel_slide-in {
+  to {
+    flex: 1;
+    width: inherit;
+  }
+}
+
+@keyframes right-panel_slide-out {
+  from{
+    flex: 1;
+    width: inherit;
+  }
+  to {
+    flex: 0 0;
+    width: 0;
+  }
+}
+
+@keyframes displayArea_slide-in {
+  from {width: 0;}
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes displayArea_slide-out {
+  from {width: 100%}
+  to {width: 0;}
+}
+
+/*-----------------------------*/
+::-webkit-scrollbar{
+  width: 0;
+  background: transparent;
+}

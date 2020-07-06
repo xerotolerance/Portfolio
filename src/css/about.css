@@ -1,0 +1,47 @@
+html, body{
+  background-color: inherit;
+  height: 98vh;
+  width: auto;
+  overflow: hidden;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about_text{
+  background: wheat;
+  height: 100%;
+  width: 100%;
+  border-radius: 3.75%;
+}
+
+.organization{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: 1%;
+}
+
+.inline_photo{
+  height: 10em;
+  max-height: 1024px;
+  min-height: 128px;
+  border-radius: 0 5%;
+}
+
+.njit_link:hover{
+  color: white !important;
+}
+
+#njitHomeLink{
+  color: red;
+}
+
+#njitCCSLink{
+  color: black;
+}
+
+

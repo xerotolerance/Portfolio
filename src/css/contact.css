@@ -1,0 +1,68 @@
+html, body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 3vmin;
+  background-color: inherit;
+  border-radius: 2.5%;
+}
+.organization{height: inherit; width: inherit;}
+.flex-box {
+  height: inherit; width: inherit;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+}
+.sector{
+  width: 50%;
+  height: 50%;
+  display: flex;
+  /*outline: 1px #BC4749 solid;*/
+
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  /*border-radius: 5%;*/
+}
+.sector-logo {
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: fill;
+}
+
+a{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: inherit;
+  align-items: inherit;
+  color: white;
+}
+
+#email-sector{
+  /*IMPORTANT: must remain "position: relative" for resizing & alignment to work*/
+  position: relative;
+  /*Positioning & resizing handled by contact_animations.js*/
+  border-radius: 100%;
+  z-index: 1;
+  width: fit-content;
+  height: 25%;
+  background-color: black;
+}
+#linkedIn-sector{background-color: white; order: 4;}
+#github-sector{background-color: #b3d4fc; order: 2;}
+#stackOverflow-sector{background-color: #b3d4fc; order: 3;}
+#indeed-sector{background-color: white; order: 1;}
+
+#email{
+  font-size: 2em;
+  /*text-decoration: underline solid white*/
+}
+
+.flex-box:nth-child(1)::after,
+.flex-box:nth-child(2)::after{
+
+}
