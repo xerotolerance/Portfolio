@@ -1,6 +1,6 @@
 const embed_srcs = {
   "About" : "html/about.html",
-  "Resume" : "doc/Christopher_Maxwell_Resume_Spring_2020_-_Revised.pdf",
+  "Resume" : "doc/Christopher_Maxwell_Resume_Fall_2020.pdf",
   "Projects" : "html/projects.html",
   "Contact" : "html/contact.html"
 };
